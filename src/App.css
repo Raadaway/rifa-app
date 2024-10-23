@@ -1,0 +1,100 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #001f3f; /* Azul oscuro */
+  color: #fff; /* Color del texto */
+  display: flex;
+  flex-direction: column; /* Para apilar el título y la cuadrícula */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: flex-start; /* Cambia a flex-start para evitar centrar verticalmente */
+  min-height: 100vh; /* Asegúrate de que el cuerpo ocupe al menos la altura de la ventana */
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+p {
+  text-align: center; /* Centra el texto del párrafo */
+  margin: 10px 0; /* Añade un margen para separar del título */
+}
+
+ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding por defecto */
+  text-align: center; /* Centra el texto de los elementos de la lista */
+}
+
+li {
+  margin: 10px 0; /* Añade un margen vertical entre los elementos de la lista */
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Cuadrícula responsiva */
+  gap: 10px;
+  padding: 20px; /* Espaciado alrededor de la cuadrícula */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+  max-width: 600px; /* Limitar el ancho máximo en pantallas grandes */
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+  color: black; /* Cambiar color del texto a negro */
+  font-weight: bold; /* Opción para hacer los números más prominentes */
+}
+
+.circle.selected {
+  background-color: #ffd700; /* Color amarillo cuando se selecciona */
+}
+
+.circle:hover {
+  background-color: #e0e0e0; /* Color al pasar el ratón */
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+/* Media Queries para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+  }
+
+  .circle {
+    width: 40px; /* Tamaño de círculo más pequeño */
+    height: 40px; /* Tamaño de círculo más pequeño */
+    font-size: 1em; /* Tamaño de fuente más pequeño */
+  }
+
+  button {
+    padding: 8px 16px; /* Ajustar el tamaño del botón */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+  }
+}
